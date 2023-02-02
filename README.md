@@ -1,4 +1,4 @@
-The aim of this project is to create a pipeline to automatically answer user questions about products using review from other users. This happens in two stages:
+The aim of this project is to create a pipeline to automatically answer user questions about products using reviews from other users. This happens in two stages:
 * ```Retriever:``` The retriever selects the most relevant reviews given the question. First, it uses a bi-encoder to compute the embeddings of all reviews and the question. \
 Then, the question is compared to all reviews using cosine similarity. It selects the top-k (say, top 100) reviews for the given question with the highest cosine similarity. \
 However, the bi-encoder sometimes returns reviews that are not relevant to the question. Due to this reason, the selected reviews are re-ranked to sort them based on how relevant they are. \
